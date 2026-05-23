@@ -15,12 +15,10 @@ void printout(int[][10], int);
 int findcross(int M[][10])
 {
     int count = 0;
-    for (int i=1; i<10; i++){
-        for (int j=1; j<10; j++){
-            if (M[i][j] == 1){
-                if (M[i-1][j] == 1 && M[i+1][j] == 1 && M[i][j-1] == 1 && M[i][j+1] == 1){
-                    count++;
-                }
+    for(int i=1; i<10; i++){
+        for(int j=1; j<10; j++){
+            if(M[i][j] == 1 && M[i-1][j] == 1 && M[i+1][j] == 1 && M[i][j-1] == 1 && M[i][j+1] == 1){
+                count++;
             }
         }
     }
